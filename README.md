@@ -1,5 +1,5 @@
 # Ex03 Time Table
-## Date:
+## Date: 21-09-2025
 
 ## AIM
 To write a html webpage page to display your slot timetable.
@@ -24,10 +24,174 @@ Add your timetable using ```<td>``` tag.
 Execute the program using runserver command.
 
 ## PROGRAM
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Timetable</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: #1a1a2e;
+      color: #fff;
+    }
+    table {
+      border-collapse: collapse;
+      margin: 30px auto;
+      text-align: center;
+      font-weight: bold;
+      width: 90%;
+    }
+    caption {
+      caption-side: top;
+      margin-bottom: 15px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #e0e0ff;
+    }
+    th, td {
+      border: 2px solid #1a1a2e;
+      padding: 10px 15px;
+    }
+    th {
+      background-color: #3a0ca3;
+      color: #fff;
+    }
+    td {
+      background-color: #1f1f3d;
+      color: #e0e0ff;
+    }
+    tr:nth-child(even) td {
+      background-color: #2a2a55;
+    }
+    .lunch {
+      background: #5a189a;
+      color: #ffd6ff;
+      font-weight: bold;
+    }
+    .free {
+      color: #ffd6ff;
+      font-weight: bold;
+      padding: 15px 20px;
+    }
+    .web {
+      background: #ffb700;
+      color: #1a1a2e;
+      font-weight: bold;
+    }
+    .logo {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .logo img {
+      width: 120px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
 
+ <img src="logo.png" alt="College Logo">
+
+
+  <!-- Timetable -->
+  <table>
+    <caption>Slot Time Table - TM KALPANAA BABU [212224230112]</caption>
+    <tr>
+      <th>Day/Time</th>
+      <th>Monday</th>
+      <th>Tuesday</th>
+      <th>Wednesday</th>
+      <th>Thursday</th>
+      <th>Friday</th>
+      <th>Saturday</th>
+    </tr>
+    <tr>
+      <td>8-10</td>
+      <td class="free">FREE</td>
+      <td class="free">FREE</td>
+      <td>Python</td>
+      <td>Python</td>
+      <td class="free" rowspan="2">FREE</td> <!-- Friday 8-12 merged -->
+      <td class="free" rowspan="2">FREE</td> <!-- Saturday 8-12 merged -->
+    </tr>
+    <tr>
+      <td>10-12</td>
+      <td>OS</td>
+      <td>Statistics</td>
+      <td>Statistics</td>
+      <td class="web">FWAD</td>
+    </tr>
+    <tr>
+      <td>12-1</td>
+      <td colspan="6" class="lunch">L U N C H</td>
+    </tr>
+    <tr>
+      <td>1-3</td>
+      <td>HRM</td>
+      <td>HRM</td>
+      <td>Mentor Hour</td>
+      <td>Web</td>
+      <td>RA</td>
+      <td class="web">FWAD</td>
+    </tr>
+    <tr>
+      <td>3-5</td>
+      <td>Python</td>
+      <td class="free" colspan="2">FREE</td>
+      <td>OS</td>
+      <td>Python</td>
+      <td class="free">FREE</td>
+    </tr>
+  </table>
+
+  <!-- Subject Code Table -->
+  <table>
+    <caption>Subject Codes and Full Names</caption>
+    <tr>
+      <th>S. No.</th>
+      <th>Subject Code</th>
+      <th>Subject Name</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>19AI414</td>
+      <td>Fundamentals of Web Application Development (FWAD)</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>19CS405</td>
+      <td>Operating System (OS)</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>19MA211</td>
+      <td>Statistics and Numerical Methods (Statistics)</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>19MS156</td>
+      <td>Human Resource Management and Team Building (HRM)</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>19AI301C</td>
+      <td>Python and Linear Algebra (Python)</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>19EY709</td>
+      <td>Reasoning Ability (RA)</td>
+    </tr>
+  </table>
+
+</body>
+</html>
+```
 
 ## OUTPUT
-
+![alt text](image.png)
 
 ## RESULT
 The program for creating slot timetable using basic HTML tags is executed successfully.
